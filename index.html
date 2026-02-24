@@ -21,7 +21,7 @@
             background: black;
             background:
                 linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-                url("images/background.jpg");
+                url("images/background2.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -52,14 +52,22 @@
             font-size: 80px;
             font-weight: bold;
             margin: 0;
-            text-shadow: 0 0 10px #240E3E, 0 0 20px #240E3E, 0 0 30px #240E3E;
+            /* glow for main title */
+            text-shadow:
+                0 0 10px #240E3E,
+                0 0 20px #240E3E,
+                0 0 30px #240E3E;
         }
 
         .header-text p {
-            font-size: 24px;
+            font-size: 24px; /* smaller subtitle text */
             margin: 5px 0 0 0;
             opacity: 0.9;
-            text-shadow: 0 0 5px #240E3E, 0 0 10px #240E3E, 0 0 15px #240E3E;
+            /* glow for subtitle */
+            text-shadow:
+                0 0 5px #240E3E,
+                0 0 10px #240E3E,
+                0 0 15px #240E3E;
         }
 
         /* container base */
@@ -167,68 +175,10 @@
             border-radius: 8px;
         }
 
-        /* miis around the page */
-        .floating-img {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            z-index: 1;
-        }
-
-        /* --- mobile --- */
-        @media (max-width: 768px) {
-            .panel-flex {
-                flex-direction: column; /* stack vertically */
-                align-items: center;
-            }
-
-            .twitch-player, .youtube-timeline {
-                width: 90%;
-                max-width: 400px;
-                height: auto;
-            }
-
-            .youtube-timeline iframe {
-                height: 200px;
-            }
-
-            .floating-img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .floating-img:nth-child(1) { top: 50px; left: 5%; }
-            .floating-img:nth-child(2) { top: 120px; right: 5%; }
-            .floating-img:nth-child(3) { bottom: 150px; left: 10%; }
-            .floating-img:nth-child(4) { bottom: 100px; right: 10%; }
-        }
-
-        @media (max-width: 480px) {
-            .header-top img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .header-text h2 {
-                font-size: 50px;
-            }
-
-            .header-text p {
-                font-size: 18px;
-            }
-        }
     </style>
 </head>
 
 <body>
-
-    <!-- miis -->
-    <img src="images/Mii4.png" class="floating-img" style="top: 150px; left: 10%; transform: rotate(0deg);">
-    <img src="images/Mii3.png" class="floating-img" style="top: 250px; right: 15%; transform: rotate(0deg);">
-    <img src="images/Mii1.png" class="floating-img" style="bottom: 200px; left: 20%; transform: rotate(-10deg);">
-    <img src="images/Mii2.png" class="floating-img" style="bottom: 150px; right: 25%; transform: rotate(10deg);">
-
     <!-- top: image + title + subtitle -->
     <div class="header-top">
         <img src="images/crnk-logo.png" alt="CRNK Logo">
@@ -281,4 +231,3 @@
 
 </body>
 </html>
-
